@@ -16,7 +16,7 @@ EOF
 
 WriteMakefile(NAME          => 'Acme::Study::SREZIC',
 	      AUTHOR        => 'Slaven Rezic <srezic@cpan.org>',
-	      VERSION       => '1.00',
+	      VERSION       => '1.01',
 	      LICENSE       => 'perl',
 	      ($eumm_recent_enough
 	       ? (META_MERGE => { resources => { repository => 'git://github.com/eserte/acme-study-srezic.git' },
