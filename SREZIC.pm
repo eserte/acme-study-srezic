@@ -11,7 +11,7 @@
 # WWW:  http://www.rezic.de/eserte/
 #
 
-package Acme::Study::REZIC;
+package Acme::Study::SREZIC;
 
 use XML::LibXML;
 use GD;
