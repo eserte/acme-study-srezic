@@ -1,5 +1,5 @@
 # -*- cperl -*-
-use 5.008;
+use 5.010; # new pack features
 use ExtUtils::MakeMaker;
 
 my $eumm_recent_enough = $ExtUtils::MakeMaker::VERSION >= 6.54;
@@ -24,4 +24,5 @@ WriteMakefile(NAME          => 'Acme::Study::SREZIC',
 	       : ()
 	      ),
 	      PREREQ_PM => { 'Test::More'  => 0 },
+	      MIN_PERL_VERSION => 5.10.0,
 	     );
