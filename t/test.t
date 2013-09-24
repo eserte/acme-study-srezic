@@ -10,20 +10,10 @@ use Test::More;
 
 plan tests => 1;
 
-if (fork == 0) {
-    # Don't disturb the actual test, so fork!
-    require GD;
-    require XML::LibXML;
-    diag "";
-    diag "XML::LibXML $XML::LibXML::VERSION";
-    diag "libxml2     " . XML::LibXML::LIBXML_RUNTIME_VERSION();
-    diag "GD          $GD::VERSION";
-    exit 0;
-}
-wait;
+# http://stackoverflow.com/questions/18969702/perl-strange-behaviour-on-unpack-of-floating-value
 
-$SIG{ALRM} = sub { die "Timeout!" };
-alarm(5);
-require_ok 'Acme::Study::SREZIC';
+my $f = 279.117156982422;
+my $got = unpack('f>', pack ('f>', $f));
+cmp_ok abs($f-$got), "<", 0.000001;
 
 __END__

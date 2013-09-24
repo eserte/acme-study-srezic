@@ -13,8 +13,7 @@
 
 package Acme::Study::SREZIC;
 
-use XML::LibXML;
-use GD;
+our $VERSION = "2.00";
 
 1;
 
@@ -30,11 +29,7 @@ None.
 
 =head1 DESCRIPTION
 
-The both statements
-
-   use XML::LibXML; use GD;
-
-in exactly this order may segfault or loop endlessly on some systems.
+Code in this module changes with every release.
 
 =head1 AUTHOR
 
