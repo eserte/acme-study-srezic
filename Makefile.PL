@@ -23,8 +23,5 @@ WriteMakefile(NAME          => 'Acme::Study::SREZIC',
 				})
 	       : ()
 	      ),
-	      PREREQ_PM => { 'XML::LibXML' => 0,
-			     'GD'          => 0,
-			     'Test::More'  => 0,
-			   },
+	      PREREQ_PM => { 'Test::More'  => 0 },
 	     );
