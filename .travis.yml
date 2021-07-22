@@ -1,9 +1,19 @@
 language: perl
-perl:
-  - "5.18"
-  - "5.16"
-  - "5.14"
-  - "5.12"
-  - "5.10"
-## currently minimum is set to 5.10.0
-#  - "5.8"
+arch:
+ - arm64
+matrix:
+ include:
+  - dist: xenial
+    perl: 5.24
+  - dist: bionic
+    perl: 5.26
+  - dist: focal
+    perl: 5.32
+#perl:
+#  - "5.18"
+#  - "5.16"
+#  - "5.14"
+#  - "5.12"
+#  - "5.10"
+### currently minimum is set to 5.10.0
+##  - "5.8"
